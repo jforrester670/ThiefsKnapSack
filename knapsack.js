@@ -60,26 +60,39 @@ let assertEqual = function(expected, actual) {
   return `false, expected ${expected}, but got ${actual}`;
 }
 
-let itemsOne = [
-  { name: 'radio', weight: 2, value: 20},
-  { name: 'TV', weight: 10, value: 100},
-  { name: 'vase', weight: 5, value: 15},
-  { name: 'rolex', weight: 1, value: 2000},
-  { name: 'statue', weight: 14, value: 200}
+let items = [
+  { weight: 10, value: 850},
+  { weight: 1, value: 150},
+  { weight: 1, value: 100},
+  { weight: 1, value: 50},
+  { weight: 5, value: 350},
+  { weight: 9, value: 900},
+  { weight: 11, value: 1000},
+  { weight: 20, value: 10000},
+  { weight: 60, value: 5},
+  { weight: 27, value: 500},
+  { weight: 25, value: 1},
+  { weight: 50, value: 10000000}
 ];
 
-let itemsTwo = [
-  { name: 'car', weight: 500, value: 20000},
-  { name: 'house', weight: 1000, value: 2000000}
-];
+let itemsTwo = [];
 
-let itemsThree = [
-  { weight: 5, value: 15},
-  { weight: 3, value: 30},
-  { weight: 1, value: 0.1},
-  { weight: 2, value: 0.15}
-];
 
-console.log(assertEqual(2200, knapsack(itemsOne, 15)));
-console.log(assertEqual(0, knapsack(itemsTwo, 15)));
-console.log(assertEqual(30.15, knapsack(itemsThree, 5)));
+console.log(assertEqual(0, knapsack(items, 0)));
+console.log(assertEqual(150, knapsack(items, 1)));
+console.log(assertEqual(250, knapsack(items, 2)));
+console.log(assertEqual(300, knapsack(items, 3)));
+console.log(assertEqual(300, knapsack(items, 4)));
+console.log(assertEqual(350, knapsack(items, 5)));
+console.log(assertEqual(500, knapsack(items, 6)));
+console.log(assertEqual(600, knapsack(items, 7)));
+console.log(assertEqual(650, knapsack(items, 8)));
+console.log(assertEqual(900, knapsack(items, 9)));
+console.log(assertEqual(1050, knapsack(items, 10)));
+console.log(assertEqual(1150, knapsack(items, 11)));
+console.log(assertEqual(1200, knapsack(items, 12)));
+console.log(assertEqual(1250, knapsack(items, 13)));
+console.log(assertEqual(1300, knapsack(items, 14)));
+console.log(assertEqual(10000000, knapsack(items, 50)));
+console.log(assertEqual(10000150, knapsack(items, 51)));
+console.log(assertEqual(0, knapsack(itemsTwo, 5)));
