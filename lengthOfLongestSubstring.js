@@ -59,8 +59,5 @@ var lengthOfLongestSubstring = function(s) {
     }
   }
 
-  console.log(subStrObj);
   return longest;
 };
-
-console.log(lengthOfLongestSubstring("dvdf"));
