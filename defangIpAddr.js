@@ -17,12 +17,15 @@ Input: address = "255.100.50.0"
 Output: "255[.]100[.]50[.]0"
 */
 
-
+// faster runtime 48ms
 var defangIPaddr = function(address) {
    const ipArr = address.split('.');
    const resultIp = `${ipArr[0]}[.]${ipArr[1]}[.]${ipArr[2]}[.]${ipArr[3]}`;
    
    return resultIp;
 };
+
+// slower runtime 60ms
+// const defangIPaddr = (address) => address.replace(/\./g, '[.]');
 
 console.log(defangIPaddr('1.1.1.1'));
