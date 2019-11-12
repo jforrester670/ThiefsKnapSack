@@ -39,6 +39,3 @@ function gameOfFives(bavarianBeerBears,scandinavianSchöllers){
     return "Uh Oh! Bjorg's a donut! No beer for anyone!";
   }
 }
-
-var arr = [5, 1, 5]
-console.log(countFives(arr));
